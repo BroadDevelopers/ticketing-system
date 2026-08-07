@@ -69,7 +69,7 @@ def create_ticket(title, description, created_by, priority='medium', category='g
         VALUES (%s, %s, %s, %s, %s, 'open')
         RETURNING ticket_id
     """, (title, description, created_by, priority, category))
-    return result[0][0] if result else None
+    return result[0]['ticket_id'] if result else None
 
 def add_message(ticket_id, message_text, author):
     """Add a message to an existing ticket."""
