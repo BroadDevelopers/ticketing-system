@@ -1,4 +1,6 @@
-command: python app/app.py
+command:
+  - python
+  - app/app.py
 env:
   - name: LAKEBASE_SECRET_SCOPE
     value: database
